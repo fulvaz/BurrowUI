@@ -21,11 +21,36 @@ import { AvailableClustersComponent } from "../components/available_clusters.com
 import { DisplayTopicsComponent } from "../components/display_topics.component";
 import { BurrowService } from "../services/burrow.service";
 import { HomeService } from "../services/home.service";
+import { DropdownModule } from '../components/dropdown/index';
+import { TableFilterPipe} from '../components/table-filter.pipe';
 
 
 @NgModule({
-  imports:      [ BrowserModule, RouterModule.forRoot(ROUTES), FormsModule, ChartsModule, HttpModule, JsonpModule ],
-  declarations: [ AppComponent, ConsumerComponent, HomeComponent, ErrorComponent, LagGraphComponent, PartitionTableComponent, PartitionFilterPipe, TopicSortPipe, ConsumerSortPipe, DisplayConsumersComponent, AvailableClustersComponent, DisplayTopicsComponent, ClusterSortPipe ],
+  imports:      [ 
+    BrowserModule,
+    RouterModule.forRoot(ROUTES), 
+    FormsModule, 
+    ChartsModule, 
+    HttpModule, 
+    JsonpModule, 
+    DropdownModule,
+  ],
+  declarations: [ 
+    AppComponent,
+    ConsumerComponent, 
+    HomeComponent, 
+    ErrorComponent, 
+    LagGraphComponent, 
+    PartitionTableComponent, 
+    PartitionFilterPipe, 
+    TopicSortPipe, 
+    ConsumerSortPipe, 
+    DisplayConsumersComponent, 
+    AvailableClustersComponent, 
+    DisplayTopicsComponent, 
+    ClusterSortPipe,
+    TableFilterPipe,
+  ],
   bootstrap:    [ AppComponent ],
   providers:    [ ConsumerService, BurrowService, HomeService ],
 })

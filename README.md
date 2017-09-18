@@ -44,3 +44,10 @@ Again, this project is used as a support tool to build on top of the hard work a
    
    *BurrowUI should now be live on your server at port 3000*
 
+## Development
+
+```
+npm install
+npm run devFrontend
+npm run devBackend
+```

@@ -1,5 +1,5 @@
 {
   "burrow" : {
-    "home" : "http://your.server.com/v2/kafka"
+    "home" : "http://test-iappweb.jpushoa.com/kafka-ui/v2/kafka"
   }
 }

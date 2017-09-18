@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ConsumerService } from '../services/consumer.service';
 import {Observable, BehaviorSubject} from "rxjs/Rx";
-import DateTimeFormat = Intl.DateTimeFormat;
+// import DateTimeFormat = Intl.DateTimeFormat;
 
 @Component({
   selector: 'lag-graph',

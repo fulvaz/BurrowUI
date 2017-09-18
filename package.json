@@ -8,7 +8,10 @@
     "start": "ng serve",
     "test": "ng test",
     "pree2e": "webdriver-manager update --standalone false --gecko false",
-    "e2e": "protractor"
+    "e2e": "protractor",
+    "devFrontend": "ng serve",
+    "devBackend": "DEV=true node server",
+    "build": "ng build --env=prod"
   },
   "private": true,
   "dependencies": {
@@ -23,6 +26,7 @@
     "body-parser": "latest",
     "core-js": "^2.4.1",
     "express": "latest",
+    "ng-zorro-antd": "^0.5.0",
     "ng2-charts": "^1.5.0",
     "request": "latest",
     "rxjs": "^5.0.1",

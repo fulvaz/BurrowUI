@@ -1,8 +1,8 @@
-<div class="mdl-card mdl-shadow--2dp" style="width: 100%">
+<div class="mdl-card mdl-shadow--2dp" style="width: 100%; overflow: visible; ">
   <div class="mdl-card__title">
     <h2 class="mdl-card__title-text">Partition State Table</h2>
   </div>
-  <div class="mdl-card__supporting-text" style="width: 100%;">
+  <div class="mdl-card__supporting-text" style="width: 100%; overflow: visible; ">
     <table class="partition-state-table mdl-data-table mdl-js-data-table mdl-data-table mdl-shadow--2dp">
       <thead>
         <tr>
@@ -18,12 +18,15 @@
           <th>Lag</th>
           <th>Start Offset</th>
           <th>End Offset</th>
-          <th class="mdl-data-table__cell--non-numeric">Topic</th>
+          <!-- <th class="mdl-data-table__cell--non-numeric">Topic</th> -->
+          <th class="mdl-data-table__cell--non-numeric">
+            <dropdown trigger="hover" trigger="click" [dataSource]="topicDropdownData">Topic</dropdown>
+          </th>
           <th class="mdl-data-table__cell--non-numeric">Recorded</th>
         </tr>
       </thead>
       <tbody *ngIf="consumer">
-        <tr *ngFor='let partition of consumer.status.partitions | partitionFilter:pipeString'>
+        <tr *ngFor="let partition of tableData | tableFilter:filterBy.topic | partitionFilter:pipeString">
           <td></td>
           <td class="mdl-data-table__cell--non-numeric">{{ partition.status }}</td>
           <td>{{ partition.partition }}</td>

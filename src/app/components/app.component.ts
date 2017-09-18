@@ -5,6 +5,7 @@ import { BurrowService } from "../services/burrow.service";
 @Component({
   selector: 'consumer_application',
   templateUrl: '../../templates/main.html',
+  styleUrls: ['./app.component.css']
 })
 
 export class AppComponent implements OnInit {

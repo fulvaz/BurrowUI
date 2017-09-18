@@ -7,6 +7,7 @@ import {ClusterConsumerHome} from "../classes/clusterConsumerHome";
 import {Consumer} from "../classes/consumer";
 import {ClusterTopicHome} from "../classes/clusterTopicHome";
 import {Topic} from "../classes/topic";
+import {environment as env} from '../../environments/environment';
 
 @Injectable()
 export class BurrowService {
@@ -64,7 +65,7 @@ export class BurrowService {
   }
 
   // Home URL for Burrow
-  private burrowUrl = '/api/burrow';
+  private burrowUrl = env.production ? '/api/burrow' : 'http://localhost:3000/api/burrow';
 
   getHome() : Observable<Home> {
     return this.http.get(this.burrowUrl + "/home")
