@@ -11,7 +11,8 @@
     "e2e": "protractor",
     "devFrontend": "ng serve",
     "devBackend": "DEV=true node server",
-    "build": "ng build --env=prod"
+    "build": "ng build --env=prod",
+    "pack": "git archive --format zip --output ./bundle.zip master"
   },
   "private": true,
   "dependencies": {

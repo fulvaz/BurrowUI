@@ -34,7 +34,7 @@ Again, this project is used as a support tool to build on top of the hard work a
    `npm install`
 2. Compile Project
 
-   `ng build`
+   `npm run build`
 3. Edit Config
 
    Edit the file /server/config/server_config.json with your Burrow Host Home
