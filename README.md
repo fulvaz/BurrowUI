@@ -13,7 +13,9 @@ Again, this project is used as a support tool to build on top of the hard work a
 ![partitions](https://github.com/GeneralMills/BurrowUI/blob/master/screenshots/partition.PNG)
 
 ## Dependencies
-* [NodeJS](https://nodejs.org "Node's Homepage")
+* [NodeJS](https://nodejs.org "Node's Homepage") - v6.x LTS
+
+  *Upcoming work to add support for versions 7.x-8.x*  
 * [Angular-CLI](https://cli.angular.io "Angular CLI's Homepage")
 * [Docker (Optional)](https://www.docker.com "Docker's Homepage")
 
