@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Consumer } from '../classes/consumer';
 import { ConsumerService } from '../services/consumer.service';
+import { EventhubService } from 'app/services/eventhub.service';
 
 @Component({
   selector: 'partition-table',
@@ -15,8 +16,7 @@ export class PartitionTableComponent implements OnInit {
   tableData: any[];
   currentTopics = [];
 
-  constructor(private consumerService: ConsumerService) {
-
+  constructor(private consumerService: ConsumerService, private eventhubService: EventhubService) {
   };
 
   ngOnInit(): void {
@@ -30,6 +30,7 @@ export class PartitionTableComponent implements OnInit {
           label: 'All',
           command: () => {
             this.onTHeadClick('topic', 'all');
+            this.eventhubService.emitFilter({filterBy: 'topic', filterValue: 'all'});
           }
         });
       }
@@ -86,6 +87,7 @@ export class PartitionTableComponent implements OnInit {
         label: topic,
         command: () => {
           this.onTHeadClick('topic', topic);
+          this.eventhubService.emitFilter({filterBy: 'topic', filterValue: topic});
         },
       };
     });

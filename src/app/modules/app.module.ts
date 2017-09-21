@@ -23,6 +23,7 @@ import { BurrowService } from "../services/burrow.service";
 import { HomeService } from "../services/home.service";
 import { DropdownModule } from '../components/dropdown/index';
 import { TableFilterPipe} from '../components/table-filter.pipe';
+import { EventhubService } from '../services/eventhub.service';
 
 
 @NgModule({
@@ -52,6 +53,6 @@ import { TableFilterPipe} from '../components/table-filter.pipe';
     TableFilterPipe,
   ],
   bootstrap:    [ AppComponent ],
-  providers:    [ ConsumerService, BurrowService, HomeService ],
+  providers:    [ ConsumerService, BurrowService, HomeService, EventhubService ],
 })
 export class AppModule { }

@@ -139,6 +139,10 @@
   dependencies:
     tsickle "^0.2"
 
+"@ngrx/store@^4.0.3":
+  version "4.0.3"
+  resolved "http://registry.npm.taobao.org/@ngrx/store/download/@ngrx/store-4.0.3.tgz#36abacdfa19bfb8506e40de80bae06050a1e15e9"
+
 "@ngtools/json-schema@1.1.0", "@ngtools/json-schema@^1.1.0":
   version "1.1.0"
   resolved "http://registry.npm.taobao.org/@ngtools/json-schema/download/@ngtools/json-schema-1.1.0.tgz#c3a0c544d62392acc2813a42c8a0dc6f58f86922"

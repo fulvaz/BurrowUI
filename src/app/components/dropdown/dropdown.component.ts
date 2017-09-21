@@ -21,7 +21,7 @@ import { Router } from '@angular/router';
                     <li class="ui-dropdown-item" *ngFor="let item of dataSource"
                         [class.active]="item===chosen"
                         [style.min-width.px]="width">
-                        <a [href]="item.url||'javascript:void(0);'" 
+                        <a [href]="item.url" 
                         [ngClass]="{'ui-dropdown-item-link':true,
                         'ui-dropdown-item-disabled':item.disabled}" 
                         (click)="itemClick($event,item)"

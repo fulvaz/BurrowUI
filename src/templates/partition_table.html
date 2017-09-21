@@ -13,27 +13,27 @@
               </button>
             </div>
           </th>
+          <th class="mdl-data-table__cell--non-numeric" >
+            <dropdown trigger="hover" trigger="click" [dataSource]="topicDropdownData" style="border-radius: 16px; padding: 0 12px; background: #dedede; line-height: 32px; display: inline-block;">Topic</dropdown>
+          </th>
           <th class="mdl-data-table__cell--non-numeric">State</th>
           <th>Partition</th>
           <th>Lag</th>
           <th>Start Offset</th>
           <th>End Offset</th>
           <!-- <th class="mdl-data-table__cell--non-numeric">Topic</th> -->
-          <th class="mdl-data-table__cell--non-numeric">
-            <dropdown trigger="hover" trigger="click" [dataSource]="topicDropdownData">Topic</dropdown>
-          </th>
           <th class="mdl-data-table__cell--non-numeric">Recorded</th>
         </tr>
       </thead>
       <tbody *ngIf="consumer">
         <tr *ngFor="let partition of tableData | tableFilter:filterBy.topic | partitionFilter:pipeString">
           <td></td>
+          <td class="mdl-data-table__cell--non-numeric" style="position: relative; left: 12px;">{{ partition.topic }}</td>
           <td class="mdl-data-table__cell--non-numeric">{{ partition.status }}</td>
           <td>{{ partition.partition }}</td>
           <td>{{ partition.end.lag | number }}</td>
           <td>{{ partition.start.offset | number }}</td>
           <td>{{ partition.end.offset | number }}</td>
-          <td class="mdl-data-table__cell--non-numeric">{{ partition.topic }}</td>
           <td class="mdl-data-table__cell--non-numeric">{{ partition.end.timestamp | date:'medium' }}</td>
         </tr>
       </tbody>
